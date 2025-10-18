@@ -1,0 +1,50 @@
+{
+  "device": {
+    "serial": "MOCK123456",
+    "model": "PixelMock",
+    "manufacturer": "Mockdroid",
+    "android_version": "13",
+    "sdk_version": "33",
+    "kernel_version": "5.10.0",
+    "state": "device"
+  },
+  "properties": {
+    "ro.product.name": "pixel_mock",
+    "ro.product.device": "pixelmock",
+    "ro.build.type": "userdebug",
+    "ro.hardware": "mockhw",
+    "ro.build.version.release": "13",
+    "ro.build.version.sdk": "33",
+    "ro.serialno": "MOCK123456"
+  },
+  "filesystem": [
+    {"path": "/", "type": "dir", "permissions": "0755", "owner": "root", "group": "root"},
+    {"path": "/system", "type": "dir", "permissions": "0755", "owner": "root", "group": "root"},
+    {"path": "/system/build.prop", "type": "file", "permissions": "0644", "owner": "root", "group": "root", "content": "ro.build.version.release=13\nro.product.model=PixelMock\n"},
+    {"path": "/system/bin", "type": "dir", "permissions": "0755", "owner": "root", "group": "shell"},
+    {"path": "/system/bin/sh", "type": "file", "permissions": "0755", "owner": "root", "group": "shell", "content": "#!/system/bin/sh\n"},
+    {"path": "/data", "type": "dir", "permissions": "0771", "owner": "system", "group": "system"},
+    {"path": "/data/local", "type": "dir", "permissions": "0755", "owner": "shell", "group": "shell"},
+    {"path": "/data/local/tmp", "type": "dir", "permissions": "0771", "owner": "shell", "group": "shell"},
+    {"path": "/sdcard", "type": "dir", "permissions": "0770", "owner": "shell", "group": "sdcard_r"},
+    {"path": "/sdcard/Download", "type": "dir", "permissions": "0770", "owner": "shell", "group": "sdcard_r"},
+    {"path": "/sdcard/Download/readme.txt", "type": "file", "permissions": "0664", "owner": "shell", "group": "sdcard_r", "content": "Mock SD card contents\n"},
+    {"path": "/proc", "type": "dir", "permissions": "0555", "owner": "root", "group": "root"},
+    {"path": "/dev", "type": "dir", "permissions": "0755", "owner": "root", "group": "root"}
+  ],
+  "packages": [
+    "com.android.settings",
+    "com.android.systemui",
+    {"package": "com.example.mock", "path": "/data/app/com.example.mock-1/base.apk"}
+  ],
+  "processes": [
+    {"pid": 123, "user": "system", "name": "system_server", "cpu": 4.2, "mem": 128.0},
+    {"pid": 456, "user": "radio", "name": "ril-daemon", "cpu": 1.1, "mem": 64.0},
+    {"pid": 789, "user": "shell", "name": "adbd", "cpu": 0.5, "mem": 32.0}
+  ],
+  "logs": [
+    "01-01 00:00:00.000  1000  1000 I ActivityManager: Mock log entry one",
+    "01-01 00:00:01.000  1000  1000 D ConnectivityService: Mock log entry two",
+    "01-01 00:00:02.000  1000  1000 W BatteryStats: Mock log entry three"
+  ]
+}
