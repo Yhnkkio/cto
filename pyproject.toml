@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adb-overlay-server"
+version = "0.1.0"
+description = "A scaffolded ADB overlay mock server with CLI."
+authors = [
+  { name = "Your Team", email = "devnull@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["adb", "overlay", "mock", "server", "zeroconf"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "typer>=0.9.0",
+  "zeroconf>=0.132.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0.0",
+  "ruff>=0.5.0",
+  "black>=24.0.0",
+]
+
+[project.scripts]
+adb-mockd = "adb_overlay_server.main:app"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["adb_overlay_server*"]
+
+[tool.setuptools.package-data]
+adb_overlay_server = [
+  "data/*.json",
+  "data/overlay/**",
+]
+
+[tool.ruff]
+line-length = 100
+extend-select = ["E", "F", "I"]
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+pythonpath = ["src"]

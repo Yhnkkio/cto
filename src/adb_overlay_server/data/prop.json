@@ -1,0 +1,8 @@
+{
+  "ro.product.manufacturer": "ExampleCorp",
+  "ro.product.model": "ExamplePhone X",
+  "ro.build.version.release": "14",
+  "ro.build.version.sdk": "34",
+  "ro.serialno": "EXAMP1E234567890",
+  "ro.bootloader": "unknown"
+}

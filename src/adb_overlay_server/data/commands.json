@@ -1,0 +1,14 @@
+{
+  "shell:getprop": {
+    "description": "Return system properties",
+    "response": "${props}"
+  },
+  "host:version": {
+    "description": "Return mock server version",
+    "response": "00000001"
+  },
+  "host:features": {
+    "description": "Advertised features",
+    "response": "shell_v2,cmd,stat_v2"
+  }
+}
