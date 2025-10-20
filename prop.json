@@ -1,0 +1,8 @@
+{
+  "ro.product.manufacturer": "Google",
+  "ro.product.brand": "google",
+  "ro.product.model": "Pixel 7",
+  "ro.product.name": "aosp_cf_x86_64_phone",
+  "ro.build.version.sdk": "34",
+  "ro.serialno": "emu-00000001"
+}

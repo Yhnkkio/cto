@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+venv/
+.logs
+logs/
+.overlay*
+overlay/
+.dist
+build/
+.dist-info/
+.eggs/
+*.egg-info/
+.DS_Store

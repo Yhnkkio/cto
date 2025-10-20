@@ -1,0 +1,3 @@
+{
+  "echo simulated": {"stdout": "simulated output\n", "stderr": "", "exit_code": 0}
+}
