@@ -1,0 +1,12 @@
+{
+  "ro.product.name": "test_product",
+  "ro.product.model": "Test Model",
+  "ro.product.device": "test_device",
+  "ro.serialno": "SER12345678",
+  "features": [
+    "shell_v2",
+    "cmd",
+    "stat_v2",
+    "ls_v2"
+  ]
+}

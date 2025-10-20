@@ -1,0 +1,12 @@
+{
+  "name": "adb-protocol-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Core ADB packet framing and device handshake implementation with tests",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": ["adb", "protocol", "cnxn", "handshake"],
+  "license": "MIT"
+}
