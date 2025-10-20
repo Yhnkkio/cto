@@ -1,0 +1,8 @@
+-r requirements.in
+
+# Developer tools
+black>=24.0.0
+ruff>=0.6.0
+mypy>=1.10.0
+types-PyYAML>=6.0.12.20240808
+nox>=2024.4.15
