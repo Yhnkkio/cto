@@ -27,22 +27,17 @@ class ADBSimulatorServer:
     async def _handle(self, reader: asyncio.StreamReader, writer: asyncio.StreamWriter) -> None:
         peer = writer.get_extra_info("peername")
         log.debug("Client connected: %s", peer)
-        # Minimal stub: echo lines back, quit on EOF
+        from .transport import StreamTransport
+        from .adb_session import ADBSession
+
+        transport = StreamTransport(reader, writer)
+        session = ADBSession(transport=transport)
         try:
-            while not reader.at_eof():
-                data = await reader.readline()
-                if not data:
-                    break
-                writer.write(data)
-                await writer.drain()
+            await session.run()
         except Exception:
             log.exception("Client handler error")
         finally:
-            writer.close()
-            try:
-                await writer.wait_closed()
-            except Exception:  # pragma: no cover - best effort
-                pass
+            await transport.close()
             log.debug("Client disconnected: %s", peer)
 
     async def run_forever(self) -> None:
