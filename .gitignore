@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+
+# Env/venv
+.env
+.venv
+.uv/
+.python-version
+
+# Build
+build/
+dist/
+*.log
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.nox/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# Project data dirs
+overlay/
+logs/
